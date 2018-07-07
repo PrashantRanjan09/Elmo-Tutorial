@@ -8,7 +8,7 @@ This tutorial can help in using:
 **Incremental Learning** <br>
 while doing Incremental training make sure to put your embedding layer name in line 758:
 
-    exclude = ['the embedding layer name yo want to remove']
+    exclude = ['the embedding layer name you want to remove']
 
 Visualization of the word vectors using Elmo:
 
