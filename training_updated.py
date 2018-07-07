@@ -755,7 +755,7 @@ def train(options, data, n_gpus, tf_save_dir, tf_log_dir,
         if restart_ckpt_file is not None:
             reader = tf.train.NewCheckpointReader(your_checkpoint_file)
             cur_vars = reader.get_variable_to_shape_map()
-            exclude = ['seq2seq/embedding/embedding','seq2seq/embedding/embedding/Adagrad']
+            exclude = ['the embedding layer name yo want to remove']
             variables_to_restore = tf.contrib.slim.get_variables_to_restore(exclude=exclude)
             loader = tf.train.Saver(variables_to_restore)
             #loader = tf.train.Saver()
