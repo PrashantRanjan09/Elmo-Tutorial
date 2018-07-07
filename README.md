@@ -10,7 +10,7 @@ This tutorial can help in using:
 Visualization of the word vectors using Elmo:
 
 * Tsne
-* Tensorbaord 
+* Tensorboard 
 
 ### Using Elmo Embedding layer in consequent models
 if you want to use Elmo Embedding layer in consequent model build refer : https://github.com/PrashantRanjan09/WordEmbeddings-Elmo-Fasttext-Word2Vec
