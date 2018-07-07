@@ -6,6 +6,9 @@ This tutorial can help in using:
 **Pre Trained Elmo Model** <br>
 **Training an Elmo Model on your new data** <br>
 **Incremental Learning** <br>
+while doing Incremental training make sure to put your embedding layer name in line 758:
+
+    exclude = ['the embedding layer name yo want to remove']
 
 Visualization of the word vectors using Elmo:
 
