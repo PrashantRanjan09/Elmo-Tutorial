@@ -17,6 +17,7 @@ Visualization of the word vectors using Elmo:
 ![Optional Text](../master/Tsne_vis.png)
 
 * Tensorboard 
+
 ![Optional Text](../master/tensorboard_vis.png)
 
 
