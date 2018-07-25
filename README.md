@@ -4,7 +4,7 @@ This is a short tutorial on using Deep contextualized word representations (ELMo
 This tutorial can help in using:
 
 * **Pre Trained Elmo Model**  - refer _Elmo_tutorial.ipynb_ <br>
-* **Training an Elmo Model on your new data** - refer _Elmo_tutorial.ipynb_ <br>
+* **Training an Elmo Model on your new data** <br>
 
 To train and evaluate a biLM, you need to provide:
    * a vocabulary file 
