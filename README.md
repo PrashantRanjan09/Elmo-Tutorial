@@ -15,7 +15,7 @@ The vocabulary file is a text file with one token per line. It must also include
 The vocabulary file should be sorted in descending order by token count in your training data. The first three entries/lines should be the special tokens : <br>
 `<S>` , <br>
 `</S>`  and <br>
-`\<UNK>`.<br>
+`<UNK>`.<br>
 
 The training data should be randomly split into many training files, each containing one slice of the data. Each file contains pre-tokenized and white space separated text, one sentence per line. Don't include the `<S>` or `</S>` tokens in your training data.
 
