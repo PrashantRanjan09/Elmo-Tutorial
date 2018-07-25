@@ -4,34 +4,36 @@ This is a short tutorial on using Deep contextualized word representations (ELMo
 This tutorial can help in using:
 
 * **Pre Trained Elmo Model**  - refer _Elmo_tutorial.ipynb_ <br>
-* **Training an Elmo Model on your new data** <br>
+* **Training an Elmo Model on your new data from scratch** <br>
 
 To train and evaluate a biLM, you need to provide:
    * a vocabulary file 
    * a set of training files 
    * a set of heldout files 
 
-The vocabulary file is a a text file with one token per line. It must also include the special tokens , and
-The vocabulary file should be sorted in descending order by token count in your training data. The first three entries/lines should be the special tokens **<S>**,**</S>** and **<UNK>**.
+The vocabulary file is a text file with one token per line. It must also include the special tokens , and
+The vocabulary file should be sorted in descending order by token count in your training data. The first three entries/lines should be the special tokens <S>,</S> and <UNK>.
 
 The training data should be randomly split into many training files, each containing one slice of the data. Each file contains pre-tokenized and white space separated text, one sentence per line. Don't include the or tokens in your training data.
 
 Once done, git clone **https://github.com/allenai/bilm-tf.git**
 and run:
 
-    python bin/train_elmo.py --train_prefix= <path to training folder> --vocab_file <path to vocab file> --save_dir <path          where models will be checkpointed>
+    python bin/train_elmo.py --train_prefix= <path to training folder> --vocab_file <path to vocab file> --save_dir <path where models will be checkpointed>
 
 To get the weights file, 
 run:
 
     python bin/dump_weights.py --save_dir /output_path/to/checkpoint --outfile/output_path/to/weights.hdf5
 
-In the save dir, one options.json will be dumped and above command will give you a weights file required to create an Elmo model (options file and json file)
+In the save dir, one options.json will be dumped and above command will give you a weights file required to create an Elmo model (options file and the weights file)
 
 For more information refer **Elmo_tutorial.ipynb**
 
 
-* **Incremental Learning** <br>
+* ## Incremental Learning/Training <br>
+
+To incrementally train an existing model with new data <br> 
 
 While doing Incremental training :
 git clone https://github.com/allenai/bilm-tf.git
