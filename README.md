@@ -3,8 +3,8 @@
 This is a short tutorial on using Deep contextualized word representations (ELMo) which is discussed in the paper https://arxiv.org/abs/1802.05365.
 This tutorial can help in using:
 
-* **Pre Trained Elmo Model** - refer Elmo_tutorial.ipynb <br>
-* **Training an Elmo Model on your new data** - -refer Elmo_tutorial.ipynb <br>
+* **Pre Trained Elmo Model**  - refer _Elmo_tutorial.ipynb_ at home <br>
+* **Training an Elmo Model on your new data** - refer _Elmo_tutorial.ipynb_ at home <br>
 
 To train and evaluate a biLM, you need to provide:
    * a vocabulary file 
@@ -12,16 +12,19 @@ To train and evaluate a biLM, you need to provide:
    * a set of heldout files 
 
 The vocabulary file is a a text file with one token per line. It must also include the special tokens , and
-The vocabulary file should be sorted in descending order by token count in your training data. The first three entries/lines should be the special tokens <S>,</S> and <UNK>.
+The vocabulary file should be sorted in descending order by token count in your training data. The first three entries/lines should be the special tokens **<S>**,**</S>** and **<UNK>**.
 
 The training data should be randomly split into many training files, each containing one slice of the data. Each file contains pre-tokenized and white space separated text, one sentence per line. Don't include the or tokens in your training data.
 
-Once done, git clone https://github.com/allenai/bilm-tf.git and run:
+Once done, git clone **https://github.com/allenai/bilm-tf.git**
+and run:
 
-python bin/train_elmo.py --train_prefix= <path to training folder> --vocab_file <path to vocab file> --save_dir <path where models will be checkpointed>
+    python bin/train_elmo.py --train_prefix= <path to training folder> --vocab_file <path to vocab file> --save_dir <path          where models will be checkpointed>
 
-To get the weights file, run:
-python bin/dump_weights.py --save_dir /output_path/to/checkpoint --outfile/output_path/to/weights.hdf5
+To get the weights file, 
+run:
+
+    python bin/dump_weights.py --save_dir /output_path/to/checkpoint --outfile/output_path/to/weights.hdf5
 
 In the save dir, one options.json will be dumped and above command will give you a weights file required to create an Elmo model (options file and json file)
 
