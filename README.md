@@ -17,7 +17,9 @@ The vocabulary file should be sorted in descending order by token count in your 
 `</S>`  and <br>
 `<UNK>`.<br>
 
-The training data should be randomly split into many training files, each containing one slice of the data. Each file contains pre-tokenized and white space separated text, one sentence per line. Don't include the `<S>` or `</S>` tokens in your training data.
+The training data should be randomly split into many training files, each containing one slice of the data. Each file contains pre-tokenized and white space separated text, one sentence per line. 
+
+**Don't include the `<S>` or `</S>` tokens in your training data.**
 
 Once done, git clone **https://github.com/allenai/bilm-tf.git**
 and run:
