@@ -12,9 +12,12 @@ To train and evaluate a biLM, you need to provide:
    * a set of heldout files 
 
 The vocabulary file is a text file with one token per line. It must also include the special tokens , and
-The vocabulary file should be sorted in descending order by token count in your training data. The first three entries/lines should be the special tokens <S>,</S> and <UNK>.
+The vocabulary file should be sorted in descending order by token count in your training data. The first three entries/lines should be the special tokens : <br>
+`<S>` , <br>
+`</S>`  and <br>
+`\<UNK>`.<br>
 
-The training data should be randomly split into many training files, each containing one slice of the data. Each file contains pre-tokenized and white space separated text, one sentence per line. Don't include the or tokens in your training data.
+The training data should be randomly split into many training files, each containing one slice of the data. Each file contains pre-tokenized and white space separated text, one sentence per line. Don't include the `<S>` or `</S>` tokens in your training data.
 
 Once done, git clone **https://github.com/allenai/bilm-tf.git**
 and run:
