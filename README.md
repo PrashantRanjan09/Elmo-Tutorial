@@ -76,7 +76,7 @@ _training_updated.py_
         if restart_ckpt_file is not None:
             reader = tf.train.NewCheckpointReader(your_checkpoint_file)
             cur_vars = reader.get_variable_to_shape_map()
-            exclude = ['the embedding layer name yo want to remove']
+            exclude = ['the embedding layer name you want to remove']
             variables_to_restore = tf.contrib.slim.get_variables_to_restore(exclude=exclude)
             loader = tf.train.Saver(variables_to_restore)
             #loader = tf.train.Saver()
